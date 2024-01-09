@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Signup Page</title>
+  <link rel="stylesheet" href="2styles.css">
+</head>
+<body>
+  <div class="container">
+    <input type="radio" id="loginTab" name="tab" class="tab" checked>
+    <input type="radio" id="signupTab" name="tab" class="tab">
+    <div class="tabs">
+      <label for="loginTab" class="tablabel">Login</label>
+      <label for="signupTab" class="tablabel">Sign Up</label>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="form-content">
+        <h2>Login</h2>
+        <label for="loginUsername">Username</label>
+        <input type="text" id="loginUsername" name="loginUsername" placeholder="Enter your username" required pattern="[A-Za-z0-9_]{1,}"><br>
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Password must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters"><br>
+        <button type="submit">Login</button>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="signupForm" class="form-content">
+        <h2>Sign Up</h2>
+        <label for="pass" class="label">Email id</label>
+        <input id="pass" type="text"  placeholder="Enter Email Address" class="input" required ><br>
+        <label for="signupUsername">Username   </label>
+        <input type="text" id="signupUsername" name="signupUsername" placeholder="Choose a username" required pattern="[A-Za-z0-9_]{1,}"><br>
+        <label for="signupPassword">Password   </label>
+        <input type="password" id="signupPassword" name="signupPassword" placeholder="Create a password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Password must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters"><br>
+        <label for="confirmPassword">Re-Enter</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Password must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters"><br>
+        <button type="submit">Sign Up</button>
+        <p id="passwordError" class="error">Passwords must match.</p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

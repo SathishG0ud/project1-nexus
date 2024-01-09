@@ -1,0 +1,73 @@
+/* styles.css */
+/* ... (previous styles remain the same) */
+
+.container {
+  text-align: center;
+}
+
+.tab {
+  display: none;
+}
+
+.tablabel {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tablabel:hover {
+  background-color: #ddd;
+}
+
+#loginTab:checked ~ .tabs #loginForm,
+#signupTab:checked ~ .tabs #signupForm {
+  display: block;
+}
+
+.form-content {
+  display: none;
+}
+
+.form-content h2 {
+  margin-top: 0;
+}
+
+#loginTab:checked ~ .tabs label[for="loginTab"],
+#signupTab:checked ~ .tabs label[for="signupTab"] {
+  background-color: #da1b60;
+  color: white;
+}
+
+button[type="submit"] {
+  background-color: #da1b60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #ff8a00;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 20%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #da1b60;
+}
